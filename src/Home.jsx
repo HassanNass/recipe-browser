@@ -16,34 +16,35 @@ function Home() {
 	return (
 		<div className="home-container">
 			<h1>Home</h1>
+			<div className="category-buttons">
+				<button 
+					className={`btn-category ${selectedCategory === "All" ? "active" : ""}`} 
+					onClick={() => handleCategoryChange("All")}
+				>
+					All
+				</button>
 
-			<button 
-				className={`btn-all ${selectedCategory === "All" ? "active" : ""}`} 
-				onClick={() => handleCategoryChange("All")}
-			>
-				All
-			</button>
+				<button 
+					className={`btn-category ${selectedCategory === "Breakfast" ? "active" : ""}`} 
+					onClick={() => handleCategoryChange("Breakfast")}
+				>
+					Breakfast
+				</button>
+				
+				<button 
+					className={`btn-category ${selectedCategory === "Lunch" ? "active" : ""}`}
+					onClick={() => handleCategoryChange("Lunch")}
+				>
+					Lunch
+				</button>
 
-			<button 
-				className={`btn-breakfast ${selectedCategory === "Breakfast" ? "active" : ""}`} 
-				onClick={() => handleCategoryChange("Breakfast")}
-			>
-				Breakfast
-			</button>
-			
-			<button 
-				className={`btn-lunch ${selectedCategory === "Lunch" ? "active" : ""}`}
-				onClick={() => handleCategoryChange("Lunch")}
-			>
-				Lunch
-			</button>
-
-			<button 
-				className={`btn-dessert ${selectedCategory === "Dessert" ? "active" : ""}`} 
-				onClick={() => handleCategoryChange("Dessert")}
-			>
-				Dessert
-			</button>
+				<button 
+					className={`btn-category ${selectedCategory === "Dessert" ? "active" : ""}`} 
+					onClick={() => handleCategoryChange("Dessert")}
+				>
+					Dessert
+				</button>
+			</div>
 
 			<ul>
 				{filteredRecipes.map((recipe, id) => (

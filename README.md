@@ -1,16 +1,71 @@
-# React + Vite
+# Recipe Browser
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based Recipe Browser that allows users to explore recipes by category and view detailed information for each recipe. The application uses React Router to navigate between pages, enabling users to browse recipe cards on the home page and access complete recipe details through dynamic routes.
 
-Currently, two official plugins are available:
+Recipes can be filtered by category, including Breakfast, Lunch, and Dessert, providing a simple and interactive browsing experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## What I Learned
 
-## React Compiler
+Through this project, I gained practical experience working with React Router and building a multi-page React application.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* Using **React Router** to create multiple pages within a React application.
+* Creating **dynamic routes** using route parameters.
+* Using the **useParams** hook to access URL parameters.
+* Building detail pages based on dynamic data from the URL.
+* Creating navigation links with **Link** from React Router.
+* Implementing conditional styling by applying classes based on component state.
+* Structuring larger components into multiple sections for better readability and maintainability.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Browse recipes on the home page.
+* Filter recipes by category.
+* View recipe details on a separate page.
+* Dynamic routing using recipe IDs.
+* Display recipe information including:
+
+  * Image
+  * Category
+  * Description
+  * Preparation time
+  * Servings
+  * Difficulty level
+  * Ingredients list
+  * Step-by-step instructions
+* Navigation back to the home page.
+* Responsive card layout.
+
+## Technologies Used
+
+* React
+* React Router
+* JavaScript (ES6+)
+* CSS3
+* Vite
+
+## Prerequisites
+
+* Node.js (version 18 or later recommended)
+* npm (included with Node.js)
+
+## How to Run It Locally
+
+To run this project on your local machine:
+
+* Clone the repository:
+
+  git clone https://github.com/HassanNass/recipe-browser.git
+
+* Navigate to the project directory:
+
+  cd recipe-browser
+
+* Install dependencies:
+
+  npm install
+
+* Start the development server:
+
+  npm run dev
+
+Open your browser and visit the URL displayed in the terminal (typically http://localhost:5173 for Vite projects).

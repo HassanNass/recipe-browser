@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom"
 import recipes from "./recipes"
+import { Link } from "react-router-dom";
 
 function RecipeDetails() {
 	const { id } = useParams();
@@ -7,7 +8,12 @@ function RecipeDetails() {
 
 	return (
 		<div className="recipe-details-container">
+			<Link to="/" className="back-link">
+				← Back to Home
+			</Link>
+			
 			<h2 className="details-header">Recipe Details</h2>
+
 			<div className="recipe-details-card">
 				<img src={recipe.image}
 					 alt={`picture of ${recipe.title}`}

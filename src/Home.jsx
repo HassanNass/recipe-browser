@@ -4,7 +4,7 @@ import RecipeCard from "./RecipeCard"
 function Home() {
 	return (
 		<div className="home-container">
-			<h1>Home Page</h1>
+			<h1>Home</h1>
 			<ul>
 				{recipes.map((recipe, id) => (
 					<RecipeCard recipe={recipe} key={recipe.id} />
